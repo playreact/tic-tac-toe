@@ -1,11 +1,9 @@
-# React Tic-Tac-Toe
+# Tic-Tac-Toe
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/1222e0e3-1731-4005-88f4-6071aee9eed4/deploy-status)
-![Star](https://img.shields.io/github/stars/mancuoj/react-tic-tac-toe?style=flat)
-![Fork](https://img.shields.io/github/forks/mancuoj/react-tic-tac-toe?style=flat)
-![MIT](https://img.shields.io/github/license/mancuoj/react-tic-tac-toe?style=flat)
-
-👉 [demo](https://mancuoj-ttt.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/27d05461-ed67-42fa-a277-ca8ed24fea81/deploy-status)](https://app.netlify.com/sites/playreact-tic-tac-toe/deploys)
+![Star](https://img.shields.io/github/stars/playreact/tic-tac-toe?style=flat)
+![Fork](https://img.shields.io/github/forks/playreact/tic-tac-toe?style=flat)
+![MIT](https://img.shields.io/github/license/playreact/tic-tac-toe?style=flat)
 
 This project is an extension of [React's official tutorial](https://react.dev/learn/tutorial-tic-tac-toe) for building a Tic-Tac-Toe game.
 
