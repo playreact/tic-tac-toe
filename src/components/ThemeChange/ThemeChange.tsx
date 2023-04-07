@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { themeChange } from 'theme-change'
-import { themes } from './Game.constants'
-import ButtonWithSound from './ButtonWithSound'
+import ButtonWithSound from '../ButtonWithSound'
+import { themes } from './ThemeChange.constants'
 
 export default function ThemeChange() {
   const [currentTheme, setCurrentTheme] = useState<string>('')

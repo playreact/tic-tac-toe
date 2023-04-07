@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import ButtonWithSound from '../ButtonWithSound'
 import type { HistoryItem } from './Game'
 import MoveOrderToggle from './GameMoveOrderToggle'
-import ButtonWithSound from './ButtonWithSound'
 
 interface MoveListProps {
   history: Array<HistoryItem>

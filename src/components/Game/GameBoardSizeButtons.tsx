@@ -1,4 +1,4 @@
-import ButtonWithSound from './ButtonWithSound'
+import ButtonWithSound from '../ButtonWithSound'
 
 export function BoardSizeButtons({ onBoardSizeChange }: { onBoardSizeChange: (size: number) => void }) {
   return (

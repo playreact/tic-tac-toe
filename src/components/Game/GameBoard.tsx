@@ -1,6 +1,6 @@
+import Congrats from '../Congrats'
 import Square from './GameSquare'
 import { calculateWinner } from './Game.helpers'
-import { Congrats } from './Congrats'
 
 interface BoardProps {
   squares: Array<string>

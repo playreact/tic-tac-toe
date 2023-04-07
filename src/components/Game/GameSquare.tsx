@@ -1,4 +1,4 @@
-import ButtonWithSound from './ButtonWithSound'
+import ButtonWithSound from '../ButtonWithSound'
 
 interface SquareProps {
   value: string

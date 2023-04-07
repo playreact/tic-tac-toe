@@ -1,6 +1,6 @@
 import { useLocalStorageState } from 'ahooks'
+import ThemeChange from '../ThemeChange'
 import Board from './GameBoard'
-import ThemeChange from './ThemeChange'
 import MoveList from './GameMoveList'
 import { BoardSizeButtons } from './GameBoardSizeButtons'
 
