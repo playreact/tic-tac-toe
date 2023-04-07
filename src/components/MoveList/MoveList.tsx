@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ButtonWithSound from '../ButtonWithSound'
-import type { HistoryItem } from './Game'
-import MoveOrderToggle from './GameMoveOrderToggle'
+import type { HistoryItem } from '../Game'
+import MoveListToggle from './MoveListToggle'
 
 interface MoveListProps {
   history: Array<HistoryItem>
@@ -35,7 +35,7 @@ export default function MoveList({ history, boardSize, currentMove, onMoveClick 
         {`You are at move #${currentMove}`}
       </div>
       {moves}
-      <MoveOrderToggle isAscending={isAscending} onToggle={() => setIsAscending(!isAscending)} />
+      <MoveListToggle isAscending={isAscending} onToggle={() => setIsAscending(!isAscending)} />
     </div>
   )
 }

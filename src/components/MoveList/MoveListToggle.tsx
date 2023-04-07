@@ -1,11 +1,11 @@
 import ButtonWithSound from '../ButtonWithSound'
 
-interface MoveOrderToggleProps {
+interface MoveListToggleProps {
   isAscending: boolean
   onToggle: () => void
 }
 
-export default function MoveOrderToggle({ isAscending, onToggle }: MoveOrderToggleProps) {
+export default function MoveListToggle({ isAscending, onToggle }: MoveListToggleProps) {
   return (
     <ButtonWithSound className="btn btn-accent" onClick={onToggle}>
       {isAscending ? 'descending' : 'ascending'}

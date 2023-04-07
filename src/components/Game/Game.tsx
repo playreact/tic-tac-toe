@@ -1,8 +1,8 @@
 import { useLocalStorageState } from 'ahooks'
 import ThemeChange from '../ThemeChange'
-import Board from './GameBoard'
-import MoveList from './GameMoveList'
-import { BoardSizeButtons } from './GameBoardSizeButtons'
+import Board from '../Board'
+import MoveList from '../MoveList'
+import BoardSizeButtons from '../BoardSizeButtons'
 
 export interface HistoryItem {
   squares: Array<string>
