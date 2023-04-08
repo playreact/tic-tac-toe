@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import ButtonWithSound from '../ButtonWithSound'
+import SoundButton from '../SoundButton'
 import type { HistoryItem } from '../Game'
 import MoveListToggle from './MoveListToggle'
 
@@ -20,9 +20,9 @@ export default function MoveList({ history, boardSize, currentMove, onMoveClick 
     const isActive = move === currentMove
 
     return (
-      <ButtonWithSound key={location} className={`btn normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
+      <SoundButton key={location} className={`btn normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
         {description}
-      </ButtonWithSound>
+      </SoundButton>
     )
   })
 

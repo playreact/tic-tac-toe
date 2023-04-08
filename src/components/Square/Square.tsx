@@ -1,4 +1,4 @@
-import ButtonWithSound from '../ButtonWithSound'
+import SoundButton from '../SoundButton'
 
 interface SquareProps {
   value: string
@@ -8,8 +8,8 @@ interface SquareProps {
 
 export default function Square({ value, onSquareClick, isWinningSquare = false }: SquareProps) {
   return (
-    <ButtonWithSound className={`btn btn-square text-lg ${isWinningSquare && 'btn-success'}`} onClick={onSquareClick}>
+    <SoundButton className={`btn btn-square text-lg ${isWinningSquare && 'btn-success'}`} onClick={onSquareClick}>
       {value}
-    </ButtonWithSound>
+    </SoundButton>
   )
 }

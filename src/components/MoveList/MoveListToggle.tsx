@@ -1,4 +1,4 @@
-import ButtonWithSound from '../ButtonWithSound'
+import SoundButton from '../SoundButton'
 
 interface MoveListToggleProps {
   isAscending: boolean
@@ -7,8 +7,8 @@ interface MoveListToggleProps {
 
 export default function MoveListToggle({ isAscending, onToggle }: MoveListToggleProps) {
   return (
-    <ButtonWithSound className="btn btn-accent" onClick={onToggle}>
+    <SoundButton className="btn btn-accent" onClick={onToggle}>
       {isAscending ? 'descending' : 'ascending'}
-    </ButtonWithSound>
+    </SoundButton>
   )
 }

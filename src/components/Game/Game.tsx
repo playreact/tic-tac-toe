@@ -1,8 +1,8 @@
 import { useLocalStorageState } from 'ahooks'
-import ThemeChange from '../ThemeChange'
 import Board from '../Board'
 import MoveList from '../MoveList'
-import BoardSizeButtons from '../BoardSizeButtons'
+import BoardSizeButtonGroup from '../BoardSizeButtonGroup'
+import Footer from '../Footer'
 
 export interface HistoryItem {
   squares: Array<string>
@@ -32,8 +32,8 @@ export default function Game() {
     <div className="flex min-h-screen justify-center font-serif">
       <div className='flex flex-col gap-2.5 my-8 mx-4'>
         <Board squares={currentSquares} boardSize={boardSize} isNextX={isNextX} onPlay={handlePlay} />
-        <BoardSizeButtons onBoardSizeChange={handleBoardSizeChange} />
-        <ThemeChange />
+        <BoardSizeButtonGroup onBoardSizeChange={handleBoardSizeChange} />
+        <Footer />
       </div>
       <div className="my-12 mx-4">
         <MoveList history={history} boardSize={boardSize} currentMove={currentMove} onMoveClick={(nextMove: number) => setCurrentMove(nextMove)} />
