@@ -13,6 +13,7 @@ This project is an extension of [React's official tutorial](https://react.dev/le
 - [x] Tailwind CSS + Daisy UI + more styles
 - [x] ESlint + auto-fix
 - [ ] Vitest + testing-library
+- [x] Random theme change button
 - [x] Show “You are at move #…” for the current move
 - [x] Use two loops to make the squares
 - [x] Add a toggle button to sort moves in either ascending or descending order
@@ -24,10 +25,11 @@ This project is an extension of [React's official tutorial](https://react.dev/le
 - [x] Use localStorage to save the game state
 - [x] 4x4, 5x5 board size
 - [ ] More animations
-- [x] More sounds 
+- [x] More sounds
 - [ ] Mute button
+- [x] Footer component
+- [x] Display only the first and last ten moves
 - [ ] AI player
-- [ ] UI improvements
 - [ ] Config Menu
-- [ ] More modes: mutliplayer, online, local multiplayer(with AI)
 - [ ] Mobile support
+- [ ] ...
