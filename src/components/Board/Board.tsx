@@ -16,11 +16,11 @@ export default function Board({ squares, boardSize, isNextX, onPlay, onBoardSize
   const winnerInfo = calculateWinner(squares, boardSize)
   let status
   if (winnerInfo)
-    status = `Winner: ${winnerInfo.winner}`
+    status = `Winner - ${winnerInfo.winner}`
   else if (squares.every(square => square))
     status = 'Draw'
   else
-    status = `Next Player: ${isNextX ? 'X' : 'O'}`
+    status = `Next Player - ${isNextX ? 'X' : 'O'}`
 
   function handleSquareClick(i: number) {
     if (calculateWinner(squares, boardSize) || squares[i])
