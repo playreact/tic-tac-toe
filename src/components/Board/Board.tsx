@@ -1,15 +1,18 @@
 import Congrats from '../Congrats'
 import Square from '../Square'
 import { calculateWinner } from '../../helpers'
+import BoardSizeButtonGroup from '../BoardSizeButtonGroup'
+import Footer from '../Footer'
 
 interface BoardProps {
   squares: Array<string>
   boardSize: number
   isNextX: boolean
   onPlay: (nextSquares: Array<string>, location: number) => void
+  onBoardSizeChange: (size: number) => void
 }
 
-export default function Board({ squares, boardSize, isNextX, onPlay }: BoardProps) {
+export default function Board({ squares, boardSize, isNextX, onPlay, onBoardSizeChange }: BoardProps) {
   const winnerInfo = calculateWinner(squares, boardSize)
   let status
   if (winnerInfo)
@@ -38,10 +41,12 @@ export default function Board({ squares, boardSize, isNextX, onPlay }: BoardProp
   })
 
   return (
-    <>
-      <div className='font-bold text-xl text-center'>{status}</div>
-      <div className='flex flex-col gap-1 justify-center'>{rows}</div>
+    <div className='flex flex-col gap-3'>
       {winnerInfo && <Congrats />}
-    </>
+      <div className='font-bold text-xl text-center'>{status}</div>
+      <div className='flex flex-col gap-1 justify-center items-center'>{rows}</div>
+      <BoardSizeButtonGroup onBoardSizeChange={onBoardSizeChange} />
+      <Footer />
+    </div>
   )
 }

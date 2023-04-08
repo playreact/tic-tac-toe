@@ -31,5 +31,5 @@ This project is an extension of [React's official tutorial](https://react.dev/le
 - [x] Display only the first and last ten moves
 - [ ] AI player
 - [ ] Config Menu
-- [ ] Mobile support
+- [x] Mobile support
 - [ ] ...
