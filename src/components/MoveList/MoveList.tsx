@@ -13,18 +13,20 @@ interface MoveListProps {
 export default function MoveList({ history, boardSize, currentMove, onMoveClick }: MoveListProps) {
   const [isAscending, setIsAscending] = useState<boolean>(true)
 
-  const moves: Array<JSX.Element> = history.map(({ location }, move) => {
-    const description = move > 0
-      ? `Go to move #${move} (${Math.floor(location! / boardSize) + 1}, ${(location! % boardSize) + 1})`
-      : 'Go to game start'
-    const isActive = move === currentMove
+  const moves: Array<JSX.Element> = history
+    .map(({ location }, move) => {
+      const description = move > 0
+        ? `Go to move #${move} (${Math.floor(location! / boardSize) + 1}, ${(location! % boardSize) + 1})`
+        : 'Go to game start'
+      const isActive = move === currentMove
 
-    return (
+      return (
       <SoundButton key={location} className={`btn normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
         {description}
       </SoundButton>
-    )
-  })
+      )
+    })
+    .filter((_, index) => index === 0 || (index >= history.length - 10 && index <= history.length - 1))
 
   if (!isAscending)
     moves.reverse()
