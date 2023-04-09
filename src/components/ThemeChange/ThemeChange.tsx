@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { themeChange } from 'theme-change'
 import SoundButton from '../SoundButton'
 import { themes } from './ThemeChange.constants'
@@ -10,10 +10,10 @@ function ThemeChange() {
     themeChange(false)
   }, [])
 
-  const handleRandomTheme = useCallback(() => {
+  function handleRandomTheme() {
     const nextTheme = themes[Math.floor(Math.random() * themes.length)].id
     setCurrentTheme(nextTheme)
-  }, [])
+  }
 
   return (
     <SoundButton data-set-theme={currentTheme} onClick={handleRandomTheme} className='btn btn-ghost btn-square'>
