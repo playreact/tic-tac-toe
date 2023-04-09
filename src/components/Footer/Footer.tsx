@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import ThemeChange from '../ThemeChange'
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className="flex justify-center">
       <ThemeChange />
@@ -10,3 +11,5 @@ export default function Footer() {
     </footer>
   )
 }
+
+export default memo(Footer)
