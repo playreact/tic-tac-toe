@@ -1,8 +1,8 @@
 import Congrats from '../Congrats'
 import Square from '../Square'
-import { calculateWinner } from '../../helpers'
 import BoardSizeButtonGroup from '../BoardSizeButtonGroup'
 import Footer from '../Footer'
+import { calculateWinner } from '@/helpers'
 
 interface BoardProps {
   squares: Array<string>

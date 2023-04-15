@@ -1,6 +1,6 @@
 import useSound from 'use-sound'
-import popUp from '../../assets/pop-up.mp3'
-import popDown from '../../assets/pop-down.mp3'
+import popUp from '@/assets/pop-up.mp3'
+import popDown from '@/assets/pop-down.mp3'
 
 interface SoundButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
