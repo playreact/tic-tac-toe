@@ -1,6 +1,8 @@
 {
-  "extends": "@antfu",
+  "extends": ["@antfu", "plugin:tailwindcss/recommended"],
   "rules": {
-    "import/export": "off"
+    "import/export": "off",
+    "tailwindcss/classnames-order": "error",
+    "tailwindcss/no-custom-classname": "off"
   }
 }

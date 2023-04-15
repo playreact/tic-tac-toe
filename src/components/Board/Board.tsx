@@ -43,9 +43,9 @@ export default function Board({ squares, boardSize, isNextX, onPlay, onBoardSize
   return (
     <div className='flex flex-col gap-4'>
       {winnerInfo && <Congrats />}
-      <div className='flex flex-col gap-1 justify-center items-center'>{rows}</div>
+      <div className='flex flex-col items-center justify-center gap-1'>{rows}</div>
       <BoardSizeButtonGroup onBoardSizeChange={onBoardSizeChange} />
-      <div className='font-bold text-lg text-center'>{status}</div>
+      <div className='text-center text-lg font-bold'>{status}</div>
       <Footer />
     </div>
   )
