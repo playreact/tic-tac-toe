@@ -10,6 +10,9 @@ dependencies:
   daisyui:
     specifier: ^2.51.5
     version: 2.51.5(autoprefixer@10.4.14)(postcss@8.4.21)
+  lucide-react:
+    specifier: ^0.145.0
+    version: 0.145.0(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -2341,6 +2344,14 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lucide-react@0.145.0(react@18.2.0):
+    resolution: {integrity: sha512-0bwi3T/DVe0Gn7HRDmtuf88j6m/+GFbQgnsoYnLX1jKnEJ/tGnP1KQY58Nfxp2gih1lOkwekJ4Hw141TNInLzA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /mdast-util-from-markdown@0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}

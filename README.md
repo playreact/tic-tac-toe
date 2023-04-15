@@ -28,6 +28,7 @@ This project is an extension of [React's official tutorial](https://react.dev/le
 - [x] More sounds
 - [ ] Mute button
 - [x] Footer component
+- [x] Use lucide-react instead of svg
 - [x] Display only the first and last ten moves
 - [ ] AI player
 - [ ] Config Menu
