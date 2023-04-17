@@ -1,13 +1,14 @@
 import { useLocalStorageState } from 'ahooks'
-import Board from '../Board'
-import MoveList from '../MoveList'
+import React from 'react'
+import MoveList from './MoveList'
+import Board from './GameBoard'
 
 export interface HistoryItem {
   squares: Array<string>
   location: number | null
 }
 
-export default function Game() {
+const Game: React.FC = () => {
   const [boardSize, setBoardSize] = useLocalStorageState<number>('gameBoardSize', { defaultValue: 3 })
   const [history, setHistory] = useLocalStorageState<HistoryItem[]>('gameHistory', { defaultValue: [{ squares: Array(boardSize * boardSize).fill(null), location: null }] })
   const [currentMove, setCurrentMove] = useLocalStorageState<number>('gameCurrentMove', { defaultValue: 0 })
@@ -33,3 +34,5 @@ export default function Game() {
     </div>
   )
 }
+
+export default Game

@@ -1,3 +1,4 @@
+import React from 'react'
 import SoundButton from '../SoundButton'
 
 interface MoveListToggleProps {
@@ -5,10 +6,12 @@ interface MoveListToggleProps {
   onToggle: () => void
 }
 
-export default function MoveListToggle({ isAscending, onToggle }: MoveListToggleProps) {
+const MoveListToggle: React.FC<MoveListToggleProps> = ({ isAscending, onToggle }) => {
   return (
     <SoundButton className="btn btn-accent" onClick={onToggle}>
       {isAscending ? 'descending' : 'ascending'}
     </SoundButton>
   )
 }
+
+export default MoveListToggle

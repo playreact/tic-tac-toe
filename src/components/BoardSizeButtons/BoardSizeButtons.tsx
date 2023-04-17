@@ -1,6 +1,11 @@
+import React from 'react'
 import SoundButton from '../SoundButton'
 
-export default function BoardSizeButtonGroup({ onBoardSizeChange }: { onBoardSizeChange: (size: number) => void }) {
+interface BoardSizeButtonsProps {
+  onBoardSizeChange: (size: number) => void
+}
+
+const BoardSizeButtons: React.FC<BoardSizeButtonsProps> = ({ onBoardSizeChange }) => {
   return (
     <div className="btn-group grid grid-cols-3">
       <SoundButton className='btn btn-outline btn-sm' onClick={() => onBoardSizeChange(3)}>3</SoundButton>
@@ -9,3 +14,5 @@ export default function BoardSizeButtonGroup({ onBoardSizeChange }: { onBoardSiz
     </div>
   )
 }
+
+export default BoardSizeButtons

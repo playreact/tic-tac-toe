@@ -1,8 +1,8 @@
-import { memo } from 'react'
+import React, { memo } from 'react'
 import { Github } from 'lucide-react'
 import ThemeChange from '../ThemeChange'
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="flex justify-center">
       <ThemeChange />

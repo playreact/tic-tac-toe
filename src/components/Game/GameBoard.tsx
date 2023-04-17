@@ -1,7 +1,8 @@
+import React from 'react'
 import Congrats from '../Congrats'
-import Square from '../Square'
-import BoardSizeButtonGroup from '../BoardSizeButtonGroup'
 import Footer from '../Footer'
+import BoardSizeButtons from '../BoardSizeButtons'
+import Square from './GameSquare'
 import { calculateWinner } from '@/helpers'
 
 interface BoardProps {
@@ -12,7 +13,7 @@ interface BoardProps {
   onBoardSizeChange: (size: number) => void
 }
 
-export default function Board({ squares, boardSize, isNextX, onPlay, onBoardSizeChange }: BoardProps) {
+const Board: React.FC<BoardProps> = ({ squares, boardSize, isNextX, onPlay, onBoardSizeChange }) => {
   const winnerInfo = calculateWinner(squares, boardSize)
   let status
   if (winnerInfo)
@@ -44,9 +45,11 @@ export default function Board({ squares, boardSize, isNextX, onPlay, onBoardSize
     <div className='flex flex-col gap-4'>
       {winnerInfo && <Congrats />}
       <div className='flex flex-col items-center justify-center gap-1'>{rows}</div>
-      <BoardSizeButtonGroup onBoardSizeChange={onBoardSizeChange} />
+      <BoardSizeButtons onBoardSizeChange={onBoardSizeChange} />
       <div className='text-center text-lg font-bold'>{status}</div>
       <Footer />
     </div>
   )
 }
+
+export default Board

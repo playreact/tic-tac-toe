@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import SoundButton from '../SoundButton'
-import type { HistoryItem } from '../Game'
 import MoveListToggle from './MoveListToggle'
+import type { HistoryItem } from './Game'
 
 interface MoveListProps {
   history: Array<HistoryItem>
@@ -10,7 +10,7 @@ interface MoveListProps {
   onMoveClick: (move: number) => void
 }
 
-export default function MoveList({ history, boardSize, currentMove, onMoveClick }: MoveListProps) {
+const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, onMoveClick }) => {
   const [isAscending, setIsAscending] = useState<boolean>(true)
 
   const moves: Array<JSX.Element> = history
@@ -21,9 +21,9 @@ export default function MoveList({ history, boardSize, currentMove, onMoveClick 
       const isActive = move === currentMove
 
       return (
-      <SoundButton key={location} className={`btn normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
-        {description}
-      </SoundButton>
+        <SoundButton key={location} className={`btn normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
+          {description}
+        </SoundButton>
       )
     })
     .filter((_, index) => index === 0 || (index >= history.length - 10 && index <= history.length - 1))
@@ -41,3 +41,5 @@ export default function MoveList({ history, boardSize, currentMove, onMoveClick 
     </div>
   )
 }
+
+export default MoveList

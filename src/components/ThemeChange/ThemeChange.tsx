@@ -1,10 +1,10 @@
-import { memo, useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { themeChange } from 'theme-change'
 import { Palette } from 'lucide-react'
 import SoundButton from '../SoundButton'
 import { themes } from './ThemeChange.constants'
 
-function ThemeChange() {
+const ThemeChange: React.FC = () => {
   const [currentTheme, setCurrentTheme] = useState<string>('')
 
   useEffect(() => {

@@ -1,3 +1,4 @@
+import React from 'react'
 import SoundButton from '../SoundButton'
 
 interface SquareProps {
@@ -6,10 +7,12 @@ interface SquareProps {
   isWinningSquare: boolean | null
 }
 
-export default function Square({ value, onSquareClick, isWinningSquare = false }: SquareProps) {
+const Square: React.FC<SquareProps> = ({ value, onSquareClick, isWinningSquare = false }) => {
   return (
     <SoundButton className={`btn btn-square text-lg ${isWinningSquare && 'btn-success'}`} onClick={onSquareClick}>
       {value}
     </SoundButton>
   )
 }
+
+export default Square
