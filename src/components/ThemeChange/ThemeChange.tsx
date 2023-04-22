@@ -18,7 +18,7 @@ const ThemeChange: React.FC = () => {
 
   return (
     <SoundButton data-set-theme={currentTheme} onClick={handleRandomTheme} className='btn btn-ghost btn-square'>
-      <Palette />
+      <Palette size={30} />
     </SoundButton>
   )
 }

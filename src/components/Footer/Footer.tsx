@@ -4,10 +4,10 @@ import ThemeChange from '../ThemeChange'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex justify-center">
+    <footer className="btn-group flex justify-center">
       <ThemeChange />
       <a href='https://github.com/playreact/tic-tac-toe' className='btn btn-ghost btn-square'>
-        <Github />
+        <Github size={30} />
       </a>
     </footer>
   )

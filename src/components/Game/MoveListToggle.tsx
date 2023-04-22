@@ -8,7 +8,7 @@ interface MoveListToggleProps {
 
 const MoveListToggle: React.FC<MoveListToggleProps> = ({ isAscending, onToggle }) => {
   return (
-    <SoundButton className="btn btn-accent" onClick={onToggle}>
+    <SoundButton className="btn btn-accent text-lg" onClick={onToggle}>
       {isAscending ? 'descending' : 'ascending'}
     </SoundButton>
   )

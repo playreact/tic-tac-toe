@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import SoundButton from '../SoundButton'
 import MoveListToggle from './MoveListToggle'
 import type { HistoryItem } from './Game'
@@ -12,6 +13,7 @@ interface MoveListProps {
 
 const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, onMoveClick }) => {
   const [isAscending, setIsAscending] = useState<boolean>(true)
+  const [parent] = useAutoAnimate({ duration: 300 })
 
   const moves: Array<JSX.Element> = history
     .map(({ location }, move) => {
@@ -21,7 +23,7 @@ const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, on
       const isActive = move === currentMove
 
       return (
-        <SoundButton key={location} className={`btn normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
+        <SoundButton key={location} className={`btn text-lg normal-case ${isActive && 'text-accent'}`} onClick={() => onMoveClick(move)}>
           {description}
         </SoundButton>
       )
@@ -32,8 +34,8 @@ const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, on
     moves.reverse()
 
   return (
-    <div className='btn-group btn-group-vertical'>
-      <div className='btn no-animation normal-case'>
+    <div className='btn-group btn-group-vertical w-64' ref={parent}>
+      <div className='btn no-animation text-lg normal-case'>
         {`You are at move #${currentMove}`}
       </div>
       {moves}

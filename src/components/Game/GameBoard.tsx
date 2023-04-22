@@ -1,7 +1,7 @@
 import React from 'react'
 import Congrats from '../Congrats'
 import Footer from '../Footer'
-import BoardSizeButtons from '../BoardSizeButtons'
+import BoardSizeButtons from './BoardSizeButtons'
 import Square from './GameSquare'
 import { calculateWinner } from '@/helpers'
 
@@ -42,11 +42,11 @@ const Board: React.FC<BoardProps> = ({ squares, boardSize, isNextX, onPlay, onBo
   })
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-5'>
       {winnerInfo && <Congrats />}
       <div className='flex flex-col items-center justify-center gap-1'>{rows}</div>
       <BoardSizeButtons onBoardSizeChange={onBoardSizeChange} />
-      <div className='text-center text-lg font-bold'>{status}</div>
+      <div className='text-center text-2xl font-bold'>{status}</div>
       <Footer />
     </div>
   )

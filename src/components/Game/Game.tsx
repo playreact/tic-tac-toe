@@ -28,7 +28,7 @@ const Game: React.FC = () => {
   }
 
   return (
-    <div className="m-8 flex min-h-screen flex-col items-center gap-8 font-serif sm:flex-row sm:items-start sm:justify-center ">
+    <div className="m-10 flex min-h-screen flex-col items-center gap-10 font-serif sm:flex-row sm:items-start sm:justify-center ">
       <Board squares={currentSquares} boardSize={boardSize} isNextX={isNextX} onPlay={handlePlay} onBoardSizeChange={handleBoardSizeChange} />
       <MoveList history={history} boardSize={boardSize} currentMove={currentMove} onMoveClick={(nextMove: number) => setCurrentMove(nextMove)} />
     </div>

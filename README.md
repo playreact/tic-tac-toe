@@ -24,7 +24,7 @@ This project is an extension of [React's official tutorial](https://react.dev/le
 - [x] Extract more components
 - [x] Use localStorage to save the game state
 - [x] 4x4, 5x5 board size
-- [ ] More animations
+- [x] More animations
 - [x] More sounds
 - [ ] Mute button
 - [x] Footer component
