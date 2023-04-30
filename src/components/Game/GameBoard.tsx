@@ -1,8 +1,8 @@
 import React from 'react'
 import Congrats from '../Congrats'
 import Footer from '../Footer'
-import BoardSizeButtons from './BoardSizeButtons'
 import Square from './GameSquare'
+import BoardSizeButtons from './GameBoardSizeButtons'
 import { calculateWinner } from '@/helpers'
 
 interface BoardProps {
