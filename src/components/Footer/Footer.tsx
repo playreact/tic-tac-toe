@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { Github } from 'lucide-react'
-import ThemeChange from '../ThemeChange'
+import ThemeChange from './ThemeChange'
 
 const Footer: React.FC = () => {
   return (
