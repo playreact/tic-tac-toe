@@ -1,8 +1,7 @@
 {
   "name": "playreact-tic-tac-toe",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
