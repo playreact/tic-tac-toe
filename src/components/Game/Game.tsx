@@ -1,7 +1,7 @@
 import React from 'react'
+import { useLocalStorage } from 'usehooks-ts'
 import MoveList from './MoveList'
 import Board from './GameBoard'
-import { useLocalStorageState } from '@/utils'
 
 export interface HistoryItem {
   squares: Array<string>
@@ -9,9 +9,9 @@ export interface HistoryItem {
 }
 
 const Game: React.FC = () => {
-  const [boardSize, setBoardSize] = useLocalStorageState<number>('gameBoardSize', 3)
-  const [history, setHistory] = useLocalStorageState<HistoryItem[]>('gameHistory', [{ squares: Array(boardSize ** 2).fill(null), location: 0 }])
-  const [currentMove, setCurrentMove] = useLocalStorageState<number>('gameCurrentMove', 0)
+  const [boardSize, setBoardSize] = useLocalStorage<number>('gameBoardSize', 3)
+  const [history, setHistory] = useLocalStorage<HistoryItem[]>('gameHistory', [{ squares: Array(boardSize ** 2).fill(null), location: 0 }])
+  const [currentMove, setCurrentMove] = useLocalStorage<number>('gameCurrentMove', 0)
   const isNextX = currentMove % 2 === 0
   const currentSquares = history[currentMove].squares
 

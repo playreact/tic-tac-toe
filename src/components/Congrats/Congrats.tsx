@@ -1,11 +1,10 @@
 import Confetti from 'react-confetti'
-import { useSize } from 'ahooks'
-import React from 'react'
+import { useScreen } from 'usehooks-ts'
 
 const Congrats: React.FC = () => {
-  const size = useSize(document.querySelector('body'))
+  const screen = useScreen()
   return (
-    <Confetti width={size?.width} height={size?.height} numberOfPieces={500} recycle={false} />
+    <Confetti width={screen?.width} height={screen?.height} numberOfPieces={500} recycle={false} />
   )
 }
 
