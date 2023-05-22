@@ -20,8 +20,8 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.0",
-    "@types/node": "^18.16.13",
+    "@antfu/eslint-config": "^0.39.1",
+    "@types/node": "^18.16.14",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react-swc": "^3.3.1",
