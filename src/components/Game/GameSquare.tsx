@@ -9,7 +9,7 @@ interface SquareProps {
 
 const Square: React.FC<SquareProps> = ({ value, onSquareClick, isWinningSquare = false }) => {
   return (
-    <SoundButton className={`btn btn-lg btn-square text-lg ${isWinningSquare && 'btn-success'}`} onClick={onSquareClick}>
+    <SoundButton className={`btn-square btn-lg btn text-lg ${isWinningSquare && 'btn-success'}`} onClick={onSquareClick}>
       {value}
     </SoundButton>
   )

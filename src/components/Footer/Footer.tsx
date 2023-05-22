@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="btn-group flex justify-center">
       <ThemeChange />
-      <a href='https://github.com/playreact/tic-tac-toe' className='btn btn-ghost btn-square'>
+      <a href='https://github.com/playreact/tic-tac-toe' title='get source code from github' className='btn-ghost btn-square btn'>
         <Github size={30} />
       </a>
     </footer>

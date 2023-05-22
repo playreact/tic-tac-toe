@@ -18,7 +18,7 @@ const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, on
   const moves: Array<JSX.Element> = history
     .map(({ location }, move) => {
       const description = move > 0
-        ? `Go to move #${move} (${Math.floor(location! / boardSize) + 1}, ${(location! % boardSize) + 1})`
+        ? `Go to move #${move} (${Math.floor(location / boardSize) + 1}, ${(location % boardSize) + 1})`
         : 'Go to game start'
       const isActive = move === currentMove
 
@@ -35,7 +35,7 @@ const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, on
 
   return (
     <div className='btn-group btn-group-vertical w-64' ref={parent}>
-      <div className='btn no-animation text-lg normal-case'>
+      <div className='no-animation btn text-lg normal-case'>
         {`You are at move #${currentMove}`}
       </div>
       {moves}

@@ -1,17 +1,17 @@
-import { useLocalStorageState } from 'ahooks'
 import React from 'react'
 import MoveList from './MoveList'
 import Board from './GameBoard'
+import { useLocalStorageState } from '@/utils'
 
 export interface HistoryItem {
   squares: Array<string>
-  location: number | null
+  location: number
 }
 
 const Game: React.FC = () => {
-  const [boardSize, setBoardSize] = useLocalStorageState<number>('gameBoardSize', { defaultValue: 3 })
-  const [history, setHistory] = useLocalStorageState<HistoryItem[]>('gameHistory', { defaultValue: [{ squares: Array(boardSize * boardSize).fill(null), location: null }] })
-  const [currentMove, setCurrentMove] = useLocalStorageState<number>('gameCurrentMove', { defaultValue: 0 })
+  const [boardSize, setBoardSize] = useLocalStorageState<number>('gameBoardSize', 3)
+  const [history, setHistory] = useLocalStorageState<HistoryItem[]>('gameHistory', [{ squares: Array(boardSize ** 2).fill(null), location: 0 }])
+  const [currentMove, setCurrentMove] = useLocalStorageState<number>('gameCurrentMove', 0)
   const isNextX = currentMove % 2 === 0
   const currentSquares = history[currentMove].squares
 
@@ -23,7 +23,7 @@ const Game: React.FC = () => {
 
   function handleBoardSizeChange(size: number) {
     setBoardSize(size)
-    setHistory([{ squares: Array(size * size).fill(null), location: null }])
+    setHistory([{ squares: Array(size * size).fill(null), location: 0 }])
     setCurrentMove(0)
   }
 
