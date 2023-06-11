@@ -12,7 +12,7 @@
   "dependencies": {
     "@formkit/auto-animate": "1.0.0-beta.6",
     "daisyui": "^2.52.0",
-    "lucide-react": "^0.233.0",
+    "lucide-react": "^0.241.0",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
