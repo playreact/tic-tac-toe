@@ -4,9 +4,9 @@ import ThemeChange from './ThemeChange'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="btn-group flex justify-center">
+    <footer className="join flex justify-center">
       <ThemeChange />
-      <a href='https://github.com/playreact/tic-tac-toe' title='get source code from github' className='btn-ghost btn-square btn'>
+      <a href='https://github.com/playreact/tic-tac-toe' title='get source code from github' className='btn-ghost btn-square join-item btn'>
         <Github size={30} />
       </a>
     </footer>

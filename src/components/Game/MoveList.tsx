@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
 import SoundButton from '../SoundButton'
 import MoveListToggle from './MoveListToggle'
 import type { HistoryItem } from './Game'
@@ -13,7 +12,6 @@ interface MoveListProps {
 
 const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, onMoveClick }) => {
   const [isAscending, setIsAscending] = useState<boolean>(true)
-  const [parent] = useAutoAnimate({ duration: 300 })
 
   const moves: Array<JSX.Element> = history
     .map(({ location }, move) => {
@@ -34,8 +32,8 @@ const MoveList: React.FC<MoveListProps> = ({ history, boardSize, currentMove, on
     moves.reverse()
 
   return (
-    <div className='btn-group btn-group-vertical w-64' ref={parent}>
-      <div className='no-animation btn text-lg normal-case'>
+    <div className='join-vertical join w-64'>
+      <div className='no-animation join-item btn text-lg normal-case'>
         {`You are at move #${currentMove}`}
       </div>
       {moves}
